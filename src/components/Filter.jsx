@@ -8,7 +8,7 @@ export const Filter = () => {
       </div>
       <div>Fuel</div>
       <div>
-        <input type="number" min="10" max="100" /> Fuel minimum
+        <input type="number" min="10" max="100" /> Fuel min
       </div>
       <div>
         <input type="number" min="10" max="100" /> Fuel max
