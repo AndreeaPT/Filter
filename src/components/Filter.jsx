@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 export const Filter = () => {
   return (
     <div>
@@ -6,12 +8,25 @@ export const Filter = () => {
       <div>
         <input type="text" />
       </div>
+      <br></br>
       <div>Fuel</div>
       <div>
-        <input type="number" min="10" max="100" /> Fuel min
+        <input
+          type="text"
+          onChange={(event) => setFuelMax(event.target.value)}
+          min="10"
+          max="100"
+        />{" "}
+        Fuel min
       </div>
       <div>
-        <input type="number" min="10" max="100" /> Fuel max
+        <input
+          type="text"
+          onChange={(event) => setFuelMax(event.target.value)}
+          min="10"
+          max="100"
+        />{" "}
+        Fuel max
       </div>
       <br></br>
       <div>Car type</div>
@@ -29,3 +44,9 @@ export const Filter = () => {
     </div>
   );
 };
+
+{
+  cars.map((car) => {
+    return <div>{car.id}, </div>;
+  });
+}
