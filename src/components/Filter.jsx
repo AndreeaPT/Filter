@@ -1,20 +1,28 @@
 import React, { useState } from "react";
 
 export const Filter = () => {
+  const [count, setCount] = useState(0);
+  const [minfuel, setMinFuel] = useState(0);
+
   return (
     <div>
       Filter By:
+      <div>
+        <button onClick={() => setCount(count + 1)}>Click for car no</button>
+        <div> {count} </div>
+      </div>
       <div>Car Number</div>
       <div>
-        <input type="text" />
+        <input type="text" value={count} />
       </div>
       <br></br>
       <div>Fuel</div>
       <div>
         <input
           type="text"
-          onChange={(event) => setFuelMax(event.target.value)}
+          onChange={(event) => setMinFuel(event.target.value)}
           min="10"
+          value={minfuel}
           max="100"
         />{" "}
         Fuel min
@@ -22,7 +30,7 @@ export const Filter = () => {
       <div>
         <input
           type="text"
-          onChange={(event) => setFuelMax(event.target.value)}
+          onChange={(event) => event.target.value}
           min="10"
           max="100"
         />{" "}
