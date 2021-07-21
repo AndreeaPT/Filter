@@ -1,3 +1,9 @@
+{
+  cars.map((car) => {
+    return <div>{car.id}, </div>;
+  });
+}
+
 export const VehicleInfo = () => {
   return (
     <div>

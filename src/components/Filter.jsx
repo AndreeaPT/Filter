@@ -44,9 +44,3 @@ export const Filter = () => {
     </div>
   );
 };
-
-{
-  cars.map((car) => {
-    return <div>{car.id}, </div>;
-  });
-}
