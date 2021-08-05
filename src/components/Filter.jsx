@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export const Filter = () => {
   const [count, setCount] = useState(0);
   const [minfuel, setMinFuel] = useState(0);
+  const [maxfuel, setMaxFuel] = useState(0);
 
   return (
     <div>
@@ -30,8 +31,9 @@ export const Filter = () => {
       <div>
         <input
           type="text"
-          onChange={(event) => event.target.value}
+          onChange={(event) => setMaxFuel(event.target.value)}
           min="10"
+          value={maxfuel}
           max="100"
         />{" "}
         Fuel max
