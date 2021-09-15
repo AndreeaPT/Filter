@@ -2,10 +2,14 @@ import React from "react";
 import { VehicleInfo } from "./Vehicles";
 
 export const VehicleInformation = () => {
-  console.log("hello there");
   const Cars = [
     {
       id: 1,
+      typeOfCar: "max",
+      carNumber: BE37654,
+      fuelMin: 40,
+      fuelMax: 100,
+      location: "Landgreven 3",
     },
     {
       id: 2,

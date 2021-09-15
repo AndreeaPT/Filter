@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { VehicleInfo } from "./Vehicles";
 
 export const Filter = () => {
   const [count, setCount] = useState(0);
@@ -9,13 +10,15 @@ export const Filter = () => {
     <div>
       Filter By:
       <div>
-        <button onClick={() => setCount(count + 1)}>Click for car no</button>
+        <button onClick={() => setCount(count + 1)}>My CityCars</button>
         <div> {count} </div>
       </div>
+      <br></br>
       <div>Car Number</div>
-      <div>
-        <input type="text" value={count} />
-      </div>
+      <label>
+        <input type="text" />
+      </label>
+      <input type="submit" value="Search" onClick={() => VehicleInfo("")} />
       <br></br>
       <div>Fuel</div>
       <div>
@@ -51,6 +54,8 @@ export const Filter = () => {
       <div>
         <input type="text" />
       </div>
+      <br></br>
+      <button className="submitButton">Submit criteria</button>
     </div>
   );
 };
