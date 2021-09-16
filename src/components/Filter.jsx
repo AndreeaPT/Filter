@@ -2,23 +2,31 @@ import React, { useState } from "react";
 import { VehicleInfo } from "./Vehicles";
 
 export const Filter = () => {
-  const [count, setCount] = useState(0);
   const [minfuel, setMinFuel] = useState(0);
   const [maxfuel, setMaxFuel] = useState(0);
+  const [carNumber, setCarNumber] = useState(0);
+  const [id, setCarId] = useState(0);
 
   return (
     <div>
       Filter By:
       <div>
-        <button onClick={() => setCount(count + 1)}>My CityCars</button>
-        <div> {count} </div>
+        <button onClick={() => setCarId(id + 1)}>My CityCars</button>
+        <div> {id} </div>
       </div>
       <br></br>
-      <div>Car Number</div>
+      <div>Car Number:</div>
       <label>
         <input type="text" />
       </label>
-      <input type="submit" value="Search" onClick={() => VehicleInfo("")} />
+      <button
+        type="submit"
+        value="Search"
+        onClick={() => setCarNumber(carNumber)}
+      >
+        Car plate results:
+      </button>
+      <div>{carNumber}</div>
       <br></br>
       <div>Fuel</div>
       <div>
@@ -42,12 +50,14 @@ export const Filter = () => {
         Fuel max
       </div>
       <br></br>
-      <div>Car type</div>
+      <div>Car type:</div>
       <div>
-        <input type="checkbox" /> Green Car
+        <input type="checkbox" />
+        <p>Green Car</p>
       </div>
       <div>
-        <input type="checkbox" /> Long Range
+        <input type="checkbox" />
+        <p>Long Range</p>
       </div>
       <br></br>
       <div>Location</div>
