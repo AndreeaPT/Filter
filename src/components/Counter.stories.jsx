@@ -4,3 +4,7 @@ import { Counter } from "./Counter";
 export const CarCounter = () => {
   return <Counter> </Counter>;
 };
+
+export default {
+  title: "Counter",
+};
