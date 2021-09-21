@@ -6,6 +6,18 @@ export const Filter = () => {
   const [maxfuel, setMaxFuel] = useState(0);
   const [carNumber, setCarNumber] = useState(0);
   const [id, setCarId] = useState(0);
+  const [carType, setCarType] = useState();
+
+
+
+  export function CarType(VehicleInformation) {
+  return {
+
+    greenCar: useState.cars.typeOfCar,
+    longRange: useState.cars.typeOfCar,
+  }
+}
+
 
   return (
     <div>
@@ -22,7 +34,7 @@ export const Filter = () => {
       <button
         type="submit"
         value="Search"
-        onClick={() => setCarNumber(carNumber)}
+        onClick={() => setCarNumber(this.setCarNumber.carNumber)}
       >
         Car plate results:
       </button>
@@ -52,11 +64,11 @@ export const Filter = () => {
       <br></br>
       <div>Car type:</div>
       <div>
-        <input type="checkbox" />
+        <input type="checkbox" onClick = {() => useState(carType)/>
         <p>Green Car</p>
       </div>
       <div>
-        <input type="checkbox" />
+        <input type="checkbox" onClick = {() => useState(carType)/>
         <p>Long Range</p>
       </div>
       <br></br>

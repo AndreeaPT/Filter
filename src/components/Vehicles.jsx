@@ -3,11 +3,11 @@ import React, { useState } from "react";
 export const VehicleInfo = (props) => {
   return (
     <div className="Car-data">
-      {props.cars.map((car) => {
+      {props.cars.map((Cars) => {
         return (
           <p>
-            {car.id}, {car.typeOfCar}, {car.carNumber}, {car.fuelMin},
-            {car.fuelMax}, {car.location}
+            {cars.id}, {cars.typeOfCar}, {cars.carNumber}, {cars.fuelMin},
+            {cars.fuelMax}, {cars.location}
           </p>
         );
       })}
